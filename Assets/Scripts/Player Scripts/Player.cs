@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
 {
     private Rigidbody playerRB;
 
-    [SerializeField] float playerSpeed = 500;
-    [SerializeField] float directionalSpeed = 20;
+    [SerializeField] float playerSpeed = 500f;
+    [SerializeField] float directionalSpeed = 20f;
 
     // Start is called before the first frame update
     void Start()
