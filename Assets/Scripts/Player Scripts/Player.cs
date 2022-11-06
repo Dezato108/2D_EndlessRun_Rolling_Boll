@@ -6,18 +6,25 @@ public class Player : MonoBehaviour
 {
     private Rigidbody playerRB;
 
-    [SerializeField] float playerSpeed = 500f;
-    [SerializeField] float directionalSpeed = 20f;
+    [SerializeField] float playerSpeed;
+    [SerializeField] float directionalSpeed;
 
+    private void Awake()
+    {
+        playerRB = GetComponent<Rigidbody>();
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
-        playerRB = GetComponent<Rigidbody>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         //The ball always rolling forward
         playerRB.velocity = Vector3.forward * playerSpeed * Time.deltaTime;
 
